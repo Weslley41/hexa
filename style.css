@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@font-face {
+	font-family: ds-digi;
+	src: url(assets/fonts/DS-DIGI.TTF);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 95vh;
+	background-color: #FFD200!important;
+	color: #269d2b!important;
+	font-family: Poppins, sans-serif;
+}
+
+#totalDays {
+	font-size: calc(1.75vw + 20px);
+}
+
+#timer {
+	font-size: calc(1.5vw + 20px);
+}
+
+#clock {
+	font-family: ds-digi;
+	font-size: calc(5vw + 50px);
+}
+
+#creator a {
+	color: #269d2b!important;
+}
