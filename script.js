@@ -15,7 +15,7 @@ setInterval(function() {
 		setTimes(months, days, hours, minutes, seconds, totalDays);
 	} else {
 		setTimes(0, 0, 0, 0, 0, 0);
-		document.getElementById("content").innerText += "\nSOMOS HEXA?";
+		document.getElementById("totalDays").innerHTML = "SOMOS HEXA!?";
 	}
 }, 1000);
 
