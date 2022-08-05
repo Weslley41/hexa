@@ -11,23 +11,36 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<p class="text-center py-2" id="info">Contador para 18/12/2022 às 18h (horário de Brasília)</p>
-	<main class="container-fluid text-center">
-		<p id="totalDays">Faltam <span id="totalDaysValue"></span> dias para o Hexa!</p>
-		<hr>
-		<div id="timer">
-			<span id="months-days"><span id="months"></span> meses, <span id="days"></span> dias e</span><br>
-			<span id="clock">
-				<span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
-			</span>
+	<nav class="navbar"> <!-- navbar-expand-lg -->
+		<div class="container-fluid">
+			<div class="navbar-nav">
+				<a onclick="changeCounter('abertura')" id="counter-abertura" class="btnCounters nav-link" href="#abertura">Abertura</a>
+				<a onclick="changeCounter('estreia')" id="counter-estreia" class="btnCounters nav-link" href="#estreia">Estreia</a>
+				<a onclick="changeCounter('hexa')" id="counter-hexa" class="btnCounters nav-link active" href="#hexa">Hexa</a>
+			</div>
 		</div>
-	</main>
+	</nav>
 
-	<footer id="creator">
-		<a href="https://github.com/Weslley41" target="_blank" class="nav-link py-3 text-center">
-			Feito por <i class="bi bi-github"></i>/Weslley41
-		</a>
-	</footer>
+	<p class="text-center py-2" id="info">Contador para <span id="dateChoice"></span> (horário de Brasília)</p>
+
+	<span id="contentMainFooter">
+		<main class="container-fluid text-center">
+			<p id="totalDays">Faltam <span id="totalDaysValue"></span> dias para <span id="choiceCounter"></span></p>
+			<hr>
+			<div id="timer">
+				<span id="months-days"><span id="months"></span> meses, <span id="days"></span> dias e</span><br>
+				<span id="clock">
+					<span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+				</span>
+			</div>
+		</main>
+		
+		<footer id="creator">
+			<a href="https://github.com/Weslley41" target="_blank" class="nav-link py-3 text-center">
+				Feito por <i class="bi bi-github"></i>/Weslley41
+			</a>
+		</footer>
+	</span>
 	<script src="script.js"></script>
 </body>
 </html>
