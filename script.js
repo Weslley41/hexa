@@ -1,7 +1,5 @@
-// Final da copa 18/12/2022
-// Começa às 12:00 (normalmente termina perto das 14:00)
 var dates = {
-	'abertura': new Date(2022, 10, 21),
+	'copa': new Date(2022, 10, 20, 13, 0, 0),
 	'estreia': new Date(2022, 10, 24, 16, 0, 0),
 	'hexa': new Date(2022, 11, 18, 14, 0, 0, 0),
 };
