@@ -34,9 +34,9 @@ setInterval(function() {
 function setTimes(months, days, hours, minutes, seconds, totalDays) {
 	document.getElementById("dateChoice").innerText = `${date.toLocaleDateString()} às ${date.getHours()}h`;
 	document.getElementById("choiceCounter").innerText = choice === 'hexa' ? 'o Hexa!' : `a ${choice}!`;
-	document.getElementById("totalDaysValue").innerText = totalDays;
-	document.getElementById("months").innerText = months;
-	document.getElementById("days").innerText = days;
+	document.getElementById("totalDaysValue").innerText = totalDays == 1 ? totalDays + ' dia' : totalDays + ' dias';
+	document.getElementById("months").innerText = months == 1 ? months + ' mês' : months + ' meses';
+	document.getElementById("days").innerText = days == 1 ? days + ' dia e' : days + ' dias e';
 	document.getElementById("hours").innerText = `${hours}`.padStart(2, "0");
 	document.getElementById("minutes").innerText = `${minutes}`.padStart(2, "0");
 	document.getElementById("seconds").innerText = `${seconds}`.padStart(2, "0");
