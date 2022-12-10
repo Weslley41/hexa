@@ -1,7 +1,6 @@
 var dates = {
-	'copa': new Date(2022, 10, 20, 13, 0, 0),
-	'estreia': new Date(2022, 10, 24, 16, 0, 0),
-	'hexa': new Date(2022, 11, 18, 14, 0, 0, 0),
+	'copa': new Date(2026, 5, 8),
+	'hexa': new Date(2026, 6, 3),
 };
 var choice = 'hexa';
 var date;
@@ -16,40 +15,18 @@ setInterval(function() {
 	date = dates[choice];
 	let dateNow = new Date();
 	let timeDiff = date.getTime() - dateNow.getTime();
-	let totalDays = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-
-	let [months, days] = calcMonths(totalDays, dateNow.getMonth());
-	let hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-	let minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-	let seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+	let totalDays = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
 
 	if (timeDiff > 0) {
-		setTimes(months, days, hours, minutes, seconds, totalDays);
+		setTimes(totalDays)
 	} else {
-		setTimes(0, 0, 0, 0, 0, 0);
+		setTimes(0);
 		document.getElementById("totalDays").innerHTML = "???";
 	}
 }, 1000);
 
-function setTimes(months, days, hours, minutes, seconds, totalDays) {
+function setTimes(totalDays) {
 	document.getElementById("dateChoice").innerText = `${date.toLocaleDateString()} às ${date.getHours()}h`;
 	document.getElementById("choiceCounter").innerText = choice === 'hexa' ? 'o Hexa!' : `a ${choice}!`;
 	document.getElementById("totalDaysValue").innerText = totalDays == 1 ? totalDays + ' dia' : totalDays + ' dias';
-	document.getElementById("months").innerText = months == 1 ? months + ' mês' : months + ' meses';
-	document.getElementById("days").innerText = days == 1 ? days + ' dia e' : days + ' dias e';
-	document.getElementById("hours").innerText = `${hours}`.padStart(2, "0");
-	document.getElementById("minutes").innerText = `${minutes}`.padStart(2, "0");
-	document.getElementById("seconds").innerText = `${seconds}`.padStart(2, "0");
-}
-
-function calcMonths(days, actualMonth) {
-	let daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-	let months = 0;
-	let daysLeft = days;
-
-	for (months; daysLeft >= daysPerMonth[actualMonth + months];months++) {
-		daysLeft -= daysPerMonth[actualMonth + months];
-	}
-
-	return [months, daysLeft];
 }
