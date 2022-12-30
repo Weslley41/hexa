@@ -5,6 +5,24 @@
 	src: url(assets/fonts/DS-DIGI.TTF);
 }
 
+.brasil:root {
+	--background-color: #FFD200;
+	--text-color: #269d2b;
+	--text-active-color: #1d7722;
+}
+
+.light:root {
+	--background-color: #ffffff;
+	--text-color: #015FE7;
+	--text-active-color: #001D6D;
+}
+
+.dark:root {
+	--background-color: #272727;
+	--text-color: #c8b85d;
+	--text-active-color: #C89C5D;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -14,8 +32,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 95vh;
-	background-color: #FFD200!important;
-	color: #269d2b!important;
+	background-color: var(--background-color);
+	color: var(--text-color);
 	font-family: Poppins, sans-serif;
 }
 
@@ -38,13 +56,16 @@ body {
 }
 
 .btnCounters {
-	color: #269d2b!important;
+	color: var(--text-color);
 }
 
 .btnCounters.active {
 	font-family: Poppins, sans-serif;
-	color: #1d7722!important;
 	font-weight: 600;
+}
+
+.btnCounters:hover {
+	color: var(--text-active-color);
 }
 
 #totalDays {
@@ -61,5 +82,9 @@ body {
 }
 
 #creator a {
-	color: #269d2b!important;
+	color: var(--text-color);
+}
+
+#creator a:hover {
+	color: var(--text-active-color);
 }
