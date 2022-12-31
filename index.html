@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Contador para a copa do mundo de 2026, a copa que o Brasil ganhará o hexa!">
+	<meta name="keywords" content="Copa do mundo 2026, Brasil, Hexa">
+	<meta name="author" content="Weslley41">
 	<title>Quantos dias para o Hexa</title>
 	<!-- Bootstrap -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -11,29 +14,30 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<nav class="navbar">
-		<div class="container-fluid">
-			<div class="navbar-nav">
-				<a onclick="changeCounter('copa')" id="counter-copa" class="btnCounters nav-link" href="#abertura">Abertura</a>
-				<a onclick="changeCounter('hexa')" id="counter-hexa" class="btnCounters nav-link active" href="#hexa">Hexa</a>
+	<header>
+		<nav class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-nav">
+					<a onclick="changeCounter('abertura')" id="abertura" class="btnCounters nav-link" href="#abertura">Abertura</a>
+					<a onclick="changeCounter('hexa')" id="hexa" class="btnCounters nav-link active" href="#hexa">Hexa</a>
+				</div>
 			</div>
-		</div>
-	</nav>
+		</nav>
 
-	<p class="text-center py-2" id="info">Contador para <span id="dateChoice"></span> (horário de Brasília)</p>
+		<p class="text-center py-2" id="info">Contador para <span id="dateChoice"></span> (horário de Brasília)</p>
+	</header>
 
-	<span id="contentMainFooter">
-		<main class="container-fluid text-center">
-			<h5>O sonho continua em 2026...</h5>
-			<p id="totalDays">Faltam <span id="totalDaysValue"></span> para <span id="choiceCounter"></span></p>
-		</main>
-		
-		<footer id="creator">
-			<a href="https://github.com/Weslley41" target="_blank" class="nav-link py-3 text-center">
-				Feito por <i class="bi bi-github"></i>/Weslley41
-			</a>
-		</footer>
-	</span>
+	<main class="container-fluid text-center py-5">
+		<h5>O sonho continua em 2026...</h5>
+		<p id="totalDays">Faltam <span id="totalDaysValue"></span> para <span id="choiceCounter"></span></p>
+	</main>
+
+	<footer id="creator">
+		<a href="https://github.com/Weslley41" target="_blank" class="nav-link py-3 text-center">
+			Feito por <i class="bi bi-github"></i>/Weslley41
+		</a>
+	</footer>
+
 	<script src="script.js"></script>
 	<script src="changeTheme.js"></script>
 </body>
