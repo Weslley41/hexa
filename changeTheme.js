@@ -20,4 +20,4 @@ setTheme(prefersColor)
 
 var themeIndex = prefersColor === 'brasil' ? 0 : 2;
 
-document.addEventListener('click', changeTheme);
+document.querySelector('main').addEventListener('click', changeTheme);
