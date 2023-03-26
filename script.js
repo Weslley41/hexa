@@ -1,6 +1,6 @@
 var dates = {
 	'abertura': new Date(2026, 5, 8),
-	'hexa': new Date(2026, 6, 3),
+	'hexa': new Date(2026, 6, 19),
 };
 var choice = 'hexa';
 var date;
